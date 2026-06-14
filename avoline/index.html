@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000208" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- PWA: install to home screen -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Avolin" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- SEO -->
+    <title>Avolin Assistant — AI for chat, voice, image &amp; music</title>
+    <meta name="description" content="Avolin is a fully functional AI assistant: streaming chat, voice in/out, image generation, AI music, web &amp; news search, and one-tap real-world actions. Built by Kennedy Marara." />
+    <meta name="keywords" content="Avolin, AI assistant, JARVIS, chat AI, voice assistant, image generation, music generation, web search, Kennedy Marara, Zimbabwe AI, free AI" />
+    <meta name="author" content="Kennedy Marara" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://avolin.replit.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Avolin Assistant" />
+    <meta property="og:title" content="Avolin Assistant — AI for chat, voice, image &amp; music" />
+    <meta property="og:description" content="A production-ready AI assistant by Kennedy Marara: chat, voice, images, music, web search and real-world actions in one app." />
+    <meta property="og:url" content="https://avolin.replit.app/" />
+    <meta property="og:image" content="https://avolin.replit.app/opengraph.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Avolin Assistant — AI for chat, voice, image &amp; music" />
+    <meta name="twitter:description" content="A production-ready AI assistant by Kennedy Marara." />
+    <meta name="twitter:image" content="https://avolin.replit.app/opengraph.jpg" />
+
+    <!-- JSON-LD: WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Avolin Assistant",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "Web, iOS, Android, Windows, macOS, Linux",
+      "url": "https://avolin.replit.app/",
+      "description": "Avolin is an AI assistant for chat, voice, image generation, music generation, web search and real-world device actions.",
+      "image": "https://avolin.replit.app/opengraph.jpg",
+      "offers": [
+        { "@type": "Offer", "name": "Avolin Basic", "price": "0", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Avolin Core", "price": "10", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Avolin Elite", "price": "90", "priceCurrency": "USD" }
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Kennedy Marara",
+        "nationality": "Zimbabwean"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* GPU-accelerated, jank-free animations across the app */
+      html, body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior: none;
+        background: #000208;
+      }
+      body { touch-action: manipulation; }
+      * { -webkit-tap-highlight-color: transparent; }
+      button, a, [role="button"] { touch-action: manipulation; }
+      .gpu { will-change: transform, opacity; transform: translateZ(0); backface-visibility: hidden; }
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Capture beforeinstallprompt as early as possible (before React mounts).
+         If the browser fires it during initial HTML parse we'd otherwise miss
+         it, and the Install button would have nothing to call .prompt() on. -->
+    <script>
+      (function () {
+        try {
+          window.__avolinDeferredInstall = null;
+          window.addEventListener("beforeinstallprompt", function (e) {
+            e.preventDefault();
+            window.__avolinDeferredInstall = e;
+            window.dispatchEvent(new CustomEvent("avolin:install-available"));
+          });
+          window.addEventListener("appinstalled", function () {
+            window.__avolinDeferredInstall = null;
+            window.dispatchEvent(new CustomEvent("avolin:installed"));
+          });
+        } catch (_) {}
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // PWA: register service worker (production only — keeps Vite HMR happy in dev)
+      if ('serviceWorker' in navigator && location.hostname !== 'localhost') {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').catch(function () {});
+        });
+        // When a freshly-installed service worker takes control, OR when it
+        // posts an update message, reload once so the page picks up the new
+        // JS bundle instead of running stale code from the previous SW.
+        var didReload = false;
+        navigator.serviceWorker.addEventListener('controllerchange', function () {
+          if (didReload) return;
+          didReload = true;
+          window.location.reload();
+        });
+        navigator.serviceWorker.addEventListener('message', function (e) {
+          if (e && e.data && e.data.type === 'AVOLIN_SW_UPDATED' && !didReload) {
+            didReload = true;
+            window.location.reload();
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

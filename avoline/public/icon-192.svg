@@ -1,0 +1,119 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avolin">
+  <defs>
+    <!-- Deep space background, matches the home page -->
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#001a32"/>
+      <stop offset="50%" stop-color="#000a18"/>
+      <stop offset="100%" stop-color="#000208"/>
+    </radialGradient>
+
+    <!-- Outer cyan halo / atmosphere -->
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgb(0,200,255)" stop-opacity="0.45"/>
+      <stop offset="40%" stop-color="rgb(0,150,255)" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="rgb(0,80,200)" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Inner reactor sphere (the bright orb) -->
+    <radialGradient id="orb" cx="42%" cy="38%" r="62%">
+      <stop offset="0%"  stop-color="rgb(240,252,255)"/>
+      <stop offset="22%" stop-color="rgb(160,235,255)"/>
+      <stop offset="55%" stop-color="rgb(40,170,240)"/>
+      <stop offset="85%" stop-color="rgb(0,90,200)"/>
+      <stop offset="100%" stop-color="rgb(0,30,90)"/>
+    </radialGradient>
+
+    <!-- Glow filter for the orb -->
+    <filter id="orbGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="ringGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5"/>
+    </filter>
+
+    <!-- Triangular play-button gradient -->
+    <linearGradient id="tri" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="rgb(255,255,255)"/>
+      <stop offset="60%" stop-color="rgb(180,235,255)"/>
+      <stop offset="100%" stop-color="rgb(80,180,240)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+
+  <!-- Outermost soft halo -->
+  <circle cx="256" cy="256" r="240" fill="url(#halo)"/>
+
+  <!-- ─── Outer ring (largest) ─── -->
+  <circle cx="256" cy="256" r="220" fill="none"
+          stroke="rgba(120,220,255,0.35)" stroke-width="1.4"/>
+  <!-- Tick marks at compass points -->
+  <g stroke="rgba(160,235,255,0.85)" stroke-width="3" stroke-linecap="round" filter="url(#ringGlow)">
+    <line x1="256" y1="22"  x2="256" y2="42"/>
+    <line x1="256" y1="470" x2="256" y2="490"/>
+    <line x1="22"  y1="256" x2="42"  y2="256"/>
+    <line x1="470" y1="256" x2="490" y2="256"/>
+  </g>
+  <!-- Small dot markers at corners on outer ring -->
+  <g fill="rgba(180,240,255,0.95)" filter="url(#ringGlow)">
+    <circle cx="256" cy="36"  r="4"/>
+    <circle cx="256" cy="476" r="4"/>
+    <circle cx="36"  cy="256" r="4"/>
+    <circle cx="476" cy="256" r="4"/>
+  </g>
+
+  <!-- ─── Mid ring with dashed pattern ─── -->
+  <circle cx="256" cy="256" r="180" fill="none"
+          stroke="rgba(120,220,255,0.55)" stroke-width="1.6"
+          stroke-dasharray="8 6"/>
+
+  <!-- ─── Inner ring (closer to orb) — solid cyan glow ─── -->
+  <circle cx="256" cy="256" r="148" fill="none"
+          stroke="rgba(150,230,255,0.85)" stroke-width="2.4"
+          filter="url(#ringGlow)"/>
+
+  <!-- ─── Tightest dashed ring hugging the orb ─── -->
+  <circle cx="256" cy="256" r="128" fill="none"
+          stroke="rgba(180,240,255,0.95)" stroke-width="1.8"
+          stroke-dasharray="3 4"/>
+
+  <!-- Square gimbal markers on the inner ring (NESW) -->
+  <g fill="none" stroke="rgba(180,240,255,0.95)" stroke-width="2" filter="url(#ringGlow)">
+    <rect x="248" y="120" width="16" height="16" rx="1"/>
+    <rect x="248" y="376" width="16" height="16" rx="1"/>
+    <rect x="120" y="248" width="16" height="16" rx="1"/>
+    <rect x="376" y="248" width="16" height="16" rx="1"/>
+  </g>
+
+  <!-- ─── Soft halo behind orb ─── -->
+  <circle cx="256" cy="256" r="115" fill="rgba(0,180,255,0.35)" filter="url(#softGlow)"/>
+
+  <!-- ─── The orb itself ─── -->
+  <circle cx="256" cy="256" r="100" fill="url(#orb)" filter="url(#orbGlow)"/>
+
+  <!-- Outline highlight on top of orb -->
+  <circle cx="256" cy="256" r="100" fill="none"
+          stroke="rgba(220,245,255,0.9)" stroke-width="2"/>
+
+  <!-- Specular highlight (top-left shine) -->
+  <ellipse cx="222" cy="218" rx="44" ry="26"
+           fill="rgba(255,255,255,0.45)" filter="url(#softGlow)"/>
+
+  <!-- ─── Inverted triangle play-button (centred) ─── -->
+  <g filter="url(#orbGlow)">
+    <polygon points="216,228 296,228 256,304" fill="url(#tri)"
+             stroke="rgba(255,255,255,0.95)" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+</svg>
