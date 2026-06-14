@@ -1,0 +1,210 @@
+🥇 Tier 1 – Avolin Elite {Yearly Subscription)
+🎨 Image Generation & Editing Upgrades
+HD & 4K Renders
+Free users get 1080p; pro users unlock 4K, 8K, or print‑ready resolution.
+
+Batch Creation
+Generate up to 10 image variations at once from a single prompt.
+
+Advanced Editing Suite
+Pro‑level tools: inpainting, outpainting, depth‑aware object insertion, style transfer with custom style images.
+
+Commercial License
+Generated images can be used commercially (e.g., for merch, YouTube thumbnails, album art).
+
+🎵 Music Generation Upgrades
+Extended Track Length
+Free users get 5 minutes; pro unlocks up to 30‑minute full songs.
+
+Multi‑Track Stems
+Download individual stems (vocals, drums, bass, melody) for remixing.
+
+Custom Voice Cloning (Singing)
+Upload a sample of your own voice and Avolin will sing in your voice.
+
+Commercial Sync License
+Use generated music in monetized videos, podcasts, or games.
+
+⚙️ Assistant Capabilities
+Custom Wake Word
+Change “Hey Avoline” to any phrase you like (e.g., “Jarvis”, “Friday”).
+
+Multi‑Device Sync
+Seamlessly continue conversations and access files across phone, desktop, and tablet.
+
+Cloud Backup
+All settings, custom app ring layout, notes, and generated content backed up securely.
+
+Priority Processing
+Jump the queue – your requests render faster even under heavy load.
+
+🥈 Tier 2 – Avolin Core (Monthly)
+🤖 Advanced AI Personality & Customization
+Full Personality Editor
+Adjust Avolin’s tone, humour level, formality, and even accent.
+
+Multiple Assistant Personas
+Switch between a professional work assistant, a creative buddy, a tutor, etc.
+
+Emotion‑Responsive Voice
+Avolin’s voice adapts its tone based on the context (excited, calm, empathetic).
+
+📊 Productivity & Integration
+API Access
+Integrate Avolin’s capabilities (image gen, music gen, search) into your own apps and workflows.
+
+Smart Home Hub
+Control IoT devices (lights, thermostat, locks) via voice – paid integrations.
+
+Calendar & Email Deep Integration
+Proactively manage schedule, book meetings, summarise inbox.
+
+Team / Family Shared Accounts
+Share assistant access, task lists, and generated content with up to 5 members.
+
+🔒 Security & Privacy
+Offline Core Mode
+Run basic AI tasks and voice commands completely offline (on‑device) for privacy.
+
+Encrypted Data Vault
+Store sensitive voice notes, passwords, or files in an encrypted, biometric‑locked vault.
+
+💡 One‑Time Purchase / Add‑On Ideas
+Starter Packs
+Sell credit packs: 100 HD image generations, 10 full‑length songs, etc.
+
+Premium Skin Packs
+The entire UI style (colours, glow effects, ring design) is customisable – sell sci‑fi, nature, cyberpunk skins.
+
+Voice Packs
+Celebrity‑style voices (legally distinct), character voices, or different languages/accents.
+
+Mini‑Game or Interactive Stories
+Unlock interactive AI‑powered story modes for kids or long drives.
+
+🪙 Why People Will Pay
+Quality & Convenience – HD assets ready to use commercially save hours.
+
+Personalisation – A voice assistant that truly sounds and behaves like you want.
+
+Productivity – Business users will pay for deep integrations and faster processing.
+
+Status – Exclusive skins, early access, and a custom wake word make it feel premium.
+
+You can start with a simple Freemium model:
+
+Free tier: basic image generation (watermarked or lower res), 5‑min music, standard wake word, no cloud sync.
+
+Core tier: everything above at month 
+
+Elite tier: all features + API access + family sharing 
+
+
+🆓 Avolin Basic Plan (Free Forever)
+Everything a user needs to experience the core assistant, completely free, with sensible usage limits.
+
+✅ Included Features
+🤖 Core Assistant
+
+Full voice and text interaction
+
+Wake word activation ("Hello Avoline" / "Hey Avoline")
+
+Task execution: calls, app launching, web search, reminders, alarms, notes, device controls
+
+Readability‑focused answer panel (never obstructs text)
+
+🎨 Image Generation
+
+Generate images from text prompts
+
+Resolution: up to 1080p (Full HD)
+
+Standard editing: background change, colour correction, simple object removal
+
+Personal use allowed (non‑commercial)
+
+20 free image generations per month
+
+🎵 Music Generation
+
+Create songs with vocals (singing) up to 5 minutes in length
+
+Styles: pop, lo‑fi, gospel, cinematic, etc.
+
+One vocal style (default Avolin voice)
+
+Personal use only
+
+10 free tracks per month
+
+📱 Interface & Customisation
+
+Full Avolin radial UI with customisable app ring
+
+Save up to 12 custom app shortcuts
+
+Local storage of layout and preferences
+
+One default theme (the classic Avolin neon blue/black)
+
+🔊 Voice & Responses
+
+Standard Avolin voice (natural, clear)
+
+Always‑listening wake word (default phrases only)
+
+Basic audio‑reactive core animation when speaking
+
+☁️ Data & Sync
+
+All data stored locally on device
+
+No cloud backup (manual export available)
+
+🛡️ Privacy
+
+No data collection for training
+
+Offline‑capable for basic tasks (where hardware allows)
+
+❌ Not Included (core/Elite required)
+4K or higher image resolution
+
+Batch image generation
+
+Image generation commercial license
+
+Music tracks longer than 5 minutes
+
+Custom voice cloning
+
+Multi‑track stems
+
+Music commercial sync license
+
+Custom wake word
+
+Multi‑device sync & cloud backup
+
+Advanced image editing (inpainting, outpainting, style transfer)
+
+API access
+
+Premium skins / voice packs
+
+Personality editor
+
+📊 Quick Comparison
+Feature	Basic (Free)	P/mo)
+Image resolution	1080p	4K / 8K
+Image gens/month	20	500
+Music track length	5 min	30 min
+Music tracks/month	10	100
+Commercial license	❌	✅
+Custom wake word	❌	✅
+Cloud sync	❌	✅
+Editing tools	Basic	Advanced
+Support	Community	Priority email/chat
+The Basic Plan is deliberately generous – it lets users truly experience what Avolin can do, making the upgrade to Pro a natural step when they need higher limits or commercial rights. No time limit, no forced ads, just a capable AI assistant right out of the box.
+
