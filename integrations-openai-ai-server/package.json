@@ -10,7 +10,7 @@
     "./audio": "./src/audio/index.ts"
   },
   "devDependencies": {
-    "@types/node": "catalog:"
+    "@types/node": "^20.0.0"
   },
   "dependencies": {
     "openai": "^6.27.0",
